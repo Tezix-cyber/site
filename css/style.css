@@ -32,7 +32,7 @@ body {
     /* espace pour le header fixe */
     display: flex;
     flex-direction: column;
-    min-height: 100px;
+    min-height: 100vh;
 }
 
 /* =========================================================
@@ -113,6 +113,9 @@ nav a:hover {
     border-top: 3px solid aquamarine;
 }
 
+/* =========================================================
+   MENU
+========================================================= */
 .menu {
     display: flex;
     flex-direction: row;
@@ -120,41 +123,42 @@ nav a:hover {
     background-color: rgb(35, 35, 35);
     color: #ffffff;
     align-items: center;
-  }
-  
-  .menu a,
-  .menu span {
+    z-index: 999;
+}
+
+.menu a,
+.menu span {
     padding: 14px 16px;
     color: white;
-  }
-  
-  .menu span {
+}
+
+.menu span {
     margin-right: 70%;
     font-family: 'Shadows Into Light Two', cursive;
     font-size: 18px;
-  
-  }
-  .menu a {
+}
+
+.menu a {
     display: block;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
-  }
-  
-  .menu a:hover {
+}
+
+.menu a:hover {
     background-color: #ddd;
     color: #483d8b;
-  }
-  
-  .menu a.active {
+}
+
+.menu a.active {
     background-color: aquamarine;
     color: black;  
     font-weight: 700;
-  }
-  
-  .menu .icon {
+}
+
+.menu .icon {
     display: none;
-  }
+}
 
 /* =========================================================
    MAIN
@@ -352,7 +356,6 @@ footer small {
 }
 
 @keyframes pulseBeat {
-
     0%,
     100% {
         text-shadow: 0 0 4px aquamarine;
@@ -364,7 +367,6 @@ footer small {
 }
 
 @keyframes pulseBeatHover {
-
     0%,
     100% {
         text-shadow: 0 0 5px aquamarine;
@@ -400,6 +402,7 @@ footer small {
         padding: 10px;
         margin-bottom: 30px;
     }
+
     .texte img {
         width: 50%;
     }
@@ -436,12 +439,39 @@ footer small {
         padding: 10px;
         margin-bottom: 30px;
     }
+
     .texte img {
         width: 70%;
     }
 }
 
-@media (max-width: 577px) {
+@media (max-width: 425px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a,
+    .menu span {
+    padding: 5px 30%;
+    color: white;
+    }
+
+    .menu span {
+        margin-right: 0;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .texte {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    main h1 {
+        font-size: 35px;
+    }
+
     .texte img {
         width: 90%;
     }
