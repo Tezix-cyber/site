@@ -158,10 +158,11 @@ main h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    margin: 20px 12%;
+    margin-left: 12%;
+    margin-right: 12%;
     text-align: center;
     align-items: center;
-    margin-bottom: 2%;
+    margin-bottom: 10%;
 }
 
 .texte p {
@@ -183,7 +184,6 @@ main h2 {
 .texte img {
     display: block;
     margin: 30px auto;
-    max-width: 60%;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
@@ -357,6 +357,9 @@ footer small {
         padding: 10px;
         margin-bottom: 30px;
     }
+    .texte img {
+        width: 50%;
+    }
 }
 
 @media (max-width: 577px) {
@@ -389,5 +392,14 @@ footer small {
     .intro p {
         padding: 10px;
         margin-bottom: 30px;
+    }
+    .texte img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 577px) {
+    .texte img {
+        width: 90%;
     }
 }
