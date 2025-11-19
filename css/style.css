@@ -55,8 +55,8 @@ header {
 }
 
 /* ---------- LOGO ---------- */
-.logo h3 {
-    font-size: 35px;
+.logo {
+    font-size: 25px;
 }
 
 .logo .dot {
@@ -68,7 +68,6 @@ header {
 nav a {
     color: white;
     font-size: 50px;
-    margin-left: 20px;
     transition: transform 0.3s, color 0.3s;
 }
 
@@ -78,17 +77,18 @@ nav a:hover {
 }
 
 /* ---------- ORBIT SPINNER ---------- */
-.orbit-spinner,
-.orbit-spinner * {
-    box-sizing: border-box;
-}
 
 .orbit-spinner {
-    width: 55px;
-    height: 55px;
+    position: absolute; /* Position absolue par rapport au header */
+    top: 10%; /* Place-le en haut du header */
+    left: 50%; /* Centre-le horizontalement */
+    transform: translateX(-50%); /* Ajuste la position pour centrer */
+    z-index: 1001; /* Assure-toi qu'il soit au-dessus de tout autre élément du header */
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     perspective: 800px;
-    position: relative;
+    box-sizing: border-box;
 }
 
 .orbit-spinner .orbit {
@@ -127,7 +127,7 @@ nav a:hover {
 
 .menu a,
 .menu span {
-    padding: 14px 16px;
+    padding: 14px 30px;
     color: white;
 }
 
@@ -171,11 +171,11 @@ main {
 
 .fond {
     background-image: url("../image/fond_néon.png");
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 main h1 {
-    font-size: 100px;
+    font-size: 80px;
 }
 
 main h2 {
@@ -390,20 +390,14 @@ footer small {
    RESPONSIVE
 ========================================================= */
 
-/* ---------- TABLETTES ≤ 768px ---------- */
-@media (max-width: 768px) {
-    .logo h3 {
-        font-size: 30px;
-    }
-
-    nav a {
-        font-size: 26px;
-        margin-left: 10px;
-    }
-
+@media (max-width: 1024px) {
     main h1 {
         font-size: 60px;
     }
+}
+
+/* ---------- TABLETTES ≤ 768px ---------- */
+@media (max-width: 768px) {
 
     .texte img {
         width: 50%;
@@ -418,20 +412,22 @@ footer small {
 @media (max-width: 577px) {
     header {
         padding: 2%;
-        justify-content: space-around;
     }
 
     .logo h3 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .logo .dot {
         margin-left: 3px;
     }
 
+    nav {
+        margin-right: 20px;
+    }
+
     nav a {
-        font-size: 25px;
-        margin: 0;
+        font-size: 40px;
     }
 
     main h1 {
@@ -453,6 +449,18 @@ footer small {
 
 /* ---------- TÉLÉPHONES ≤ 425px ---------- */
 @media (max-width: 425px) {
+
+    .header {
+        justify-content: space-between;
+    }
+    .orbit-spinner {
+        opacity: 0;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
     .menu {
         flex-direction: column;
         align-items: center;
