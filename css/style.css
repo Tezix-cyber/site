@@ -79,11 +79,16 @@ nav a:hover {
 /* ---------- ORBIT SPINNER ---------- */
 
 .orbit-spinner {
-    position: absolute; /* Position absolue par rapport au header */
-    top: 10%; /* Place-le en haut du header */
-    left: 50%; /* Centre-le horizontalement */
-    transform: translateX(-50%); /* Ajuste la position pour centrer */
-    z-index: 1001; /* Assure-toi qu'il soit au-dessus de tout autre élément du header */
+    position: absolute;
+    /* Position absolue par rapport au header */
+    top: 10%;
+    /* Place-le en haut du header */
+    left: 50%;
+    /* Centre-le horizontalement */
+    transform: translateX(-50%);
+    /* Ajuste la position pour centrer */
+    z-index: 1001;
+    /* Assure-toi qu'il soit au-dessus de tout autre élément du header */
     width: 75px;
     height: 75px;
     border-radius: 50%;
@@ -455,6 +460,7 @@ footer small {
     .header {
         justify-content: space-between;
     }
+
     .orbit-spinner {
         opacity: 0;
     }
