@@ -35,6 +35,210 @@ body {
     line-height: 1.6;
 }
 
+/* Le loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    z-index: 1001;
+    opacity: 1;
+    visibility: visible;
+    animation: fadeOut 1s forwards;
+    animation-delay: 1s;
+}
+
+/* animation cssfx */
+.breeding-rhombus-spinner {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px aquamarine, 0 0 20px cyan;
+}
+
+.breeding-rhombus-spinner,
+.breeding-rhombus-spinner * {
+    box-sizing: border-box;
+}
+
+.breeding-rhombus-spinner .rhombus {
+    height: calc(100px / 7.5);
+    width: calc(100px / 7.5);
+    animation-duration: 2000ms;
+    top: calc(100px / 2.3077);
+    left: calc(100px / 2.3077);
+    background-color: aquamarine;
+    position: absolute;
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 10px aquamarine, 0 0 20px cyan;
+}
+
+.breeding-rhombus-spinner .rhombus:nth-child(2n+0) {
+    margin-right: 0;
+}
+
+.breeding-rhombus-spinner .rhombus.child-1 {
+    animation-name: breeding-rhombus-spinner-animation-child-1;
+    animation-delay: calc(100ms * 1);
+}
+
+.breeding-rhombus-spinner .rhombus.child-2 {
+    animation-name: breeding-rhombus-spinner-animation-child-2;
+    animation-delay: calc(100ms * 2);
+}
+
+.breeding-rhombus-spinner .rhombus.child-3 {
+    animation-name: breeding-rhombus-spinner-animation-child-3;
+    animation-delay: calc(100ms * 3);
+}
+
+.breeding-rhombus-spinner .rhombus.child-4 {
+    animation-name: breeding-rhombus-spinner-animation-child-4;
+    animation-delay: calc(100ms * 4);
+}
+
+.breeding-rhombus-spinner .rhombus.child-5 {
+    animation-name: breeding-rhombus-spinner-animation-child-5;
+    animation-delay: calc(100ms * 5);
+}
+
+.breeding-rhombus-spinner .rhombus.child-6 {
+    animation-name: breeding-rhombus-spinner-animation-child-6;
+    animation-delay: calc(100ms * 6);
+}
+
+.breeding-rhombus-spinner .rhombus.child-7 {
+    animation-name: breeding-rhombus-spinner-animation-child-7;
+    animation-delay: calc(100ms * 7);
+}
+
+.breeding-rhombus-spinner .rhombus.child-8 {
+    animation-name: breeding-rhombus-spinner-animation-child-8;
+    animation-delay: calc(100ms * 8);
+}
+
+.breeding-rhombus-spinner .rhombus.big {
+    height: calc(100px / 3);
+    width: calc(100px / 3);
+    animation-duration: 2000ms;
+    top: calc(100px / 3);
+    left: calc(100px / 3);
+    background-color: rgb(255, 255, 255);
+    animation: breeding-rhombus-spinner-animation-child-big 2s infinite;
+    animation-delay: 0.5s;
+    box-shadow: 0 0 10px aquamarine, 0 0 20px cyan;
+}
+
+@keyframes breeding-rhombus-spinner-animation-child-1 {
+    50% {
+        transform: translate(-325%, -325%);
+    }
+}
+
+@keyframes breeding-rhombus-spinner-animation-child-2 {
+    50% {
+        transform: translate(0, -325%);
+    }
+}
+
+@keyframes breeding-rhombus-spinner-animation-child-3 {
+    50% {
+        transform: translate(325%, -325%);
+    }
+}
+
+@keyframes breeding-rhombus-spinner-animation-child-4 {
+    50% {
+        transform: translate(325%, 0);
+    }
+}
+
+@keyframes breeding-rhombus-spinner-animation-child-5 {
+    50% {
+        transform: translate(325%, 325%);
+    }
+}
+
+@keyframes breeding-rhombus-spinner-animation-child-6 {
+    50% {
+        transform: translate(0, 325%);
+    }
+}
+
+@keyframes breeding-rhombus-spinner-animation-child-7 {
+    50% {
+        transform: translate(-325%, 325%);
+    }
+}
+
+@keyframes breeding-rhombus-spinner-animation-child-8 {
+    50% {
+        transform: translate(-325%, 0);
+    }
+}
+
+@keyframes breeding-rhombus-spinner-animation-child-big {
+    50% {
+        transform: scale(0.5);
+    }
+}
+
+/* animation cssfx */
+.balls {
+    width: 7.5em;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.balls div {
+    width: 1.5em;
+    /* avant 0.8em */
+    height: 1.5em;
+    /* avant 0.8em */
+    border-radius: 50%;
+    background-color: aquamarine;
+    box-shadow: 0 0 10px aquamarine, 0 0 20px cyan;
+}
+
+.balls div:nth-of-type(1) {
+    transform: translateX(-100%);
+    animation: left-swing 0.5s ease-in alternate infinite;
+}
+
+.balls div:nth-of-type(3) {
+    transform: translateX(-95%);
+    animation: right-swing 0.5s ease-out alternate infinite;
+}
+
+@keyframes left-swing {
+
+    50%,
+    100% {
+        transform: translateX(95%);
+    }
+}
+
+@keyframes right-swing {
+    50% {
+        transform: translateX(-95%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
 /* =========================================================
    HEADER
 ========================================================= */
@@ -51,7 +255,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 999;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
@@ -94,7 +298,7 @@ nav a:hover {
     /* Centre-le horizontalement */
     transform: translateX(-50%);
     /* Ajuste la position pour centrer */
-    z-index: 1001;
+    z-index: 1000;
     /* Assure-toi qu'il soit au-dessus de tout autre élément du header */
     width: 75px;
     height: 75px;
@@ -134,7 +338,7 @@ nav a:hover {
     align-items: center;
     background-color: rgb(35, 35, 35);
     color: white;
-    z-index: 999;
+    z-index: 998;
     margin-left: 3%;
 }
 
@@ -392,6 +596,18 @@ footer small {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
