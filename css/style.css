@@ -52,6 +52,13 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+header:hover {
+    box-shadow: 0 0 15px aquamarine;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* ---------- LOGO ---------- */
@@ -306,6 +313,54 @@ main h2 {
     margin-bottom: 10px;
 }
 
+/* ---------- CTA ---------- */
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px 0;
+    background: linear-gradient(145deg, rgba(0, 255, 255, 0.1), rgba(0, 128, 255, 0.1));
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.4);
+}
+
+.cta h2 {
+    font-family: 'police_design';
+    color: aquamarine;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.cta-btn {
+    display: inline-block;
+    width: 30%;
+    height: 40%;
+    margin-bottom: 2%;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(135deg, aquamarine, #00ffff);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(135deg, #00ffff, aquamarine);
+    transform: scale(1.05);
+}
+
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -331,7 +386,7 @@ footer small {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-40px);
+        transform: translateY(20px);
     }
 
     to {
@@ -469,7 +524,8 @@ footer small {
 
     .menu {
         flex-direction: column;
-        gap: 10px;;
+        gap: 10px;
+        ;
     }
 
     .menu a,
