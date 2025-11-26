@@ -8,6 +8,12 @@ Ce projet a été réalisé dans le cadre de ma **SAE en 1e année de BUT Résea
 
 ---
 
+## 🚀 Objectif du projet
+
+Mon objectif : montrer mon univers musical et mes compétences web dans un projet concret qui me passionne !  
+
+---
+
 ## 🔗 Accès au site
 
 💻 [Clique ici pour visiter le site](https://tezix-cyber.github.io/site/)  
@@ -16,12 +22,10 @@ Ce projet a été réalisé dans le cadre de ma **SAE en 1e année de BUT Résea
 
 ## 📝 À propos
 
-
 Ce site permet de :  
 - Découvrir mes compétences en **développement web** (HTML, CSS) 
 - En apprendre + sur la MAO  
 - Découvrir et écouter mes productions musicales  
-
 
 ## 🛠 Technologies utilisées
 
@@ -49,12 +53,6 @@ Ce site permet de :
 │- favicon/ # Favicon du site
 
 │- songs/ # Fichiers audio
-
----
-
-## 🚀 Objectif du projet
-
-Mon objectif : montrer mon univers musical et mes compétences web dans un projet concret qui me passionne !  
 
 ---
 
