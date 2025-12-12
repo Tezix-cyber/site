@@ -58,4 +58,4 @@ Ce site permet de :
 
 ## 👤 Auteur
 
-**Tezix** – Étudiant en BUT RT, passionné de musique et de développement web 🎶
+**Tezix** – Étudiant en BUT RT, passionné de musique 🎶
