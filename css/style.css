@@ -1,15 +1,11 @@
-/* =========================================================
-   RESET
-========================================================= */
+/* ===================RESET ========================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* =========================================================
-   POLICES
-========================================================= */
+/* ===================POLICES ========================= */
 @font-face {
     font-family: 'police_design';
     src: url("../fonts/Yeseva_One/YesevaOne-Regular.ttf");
@@ -20,22 +16,19 @@
     src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
 
-/* =========================================================
-   STRUCTURE GLOBALE
-========================================================= */
+/* ===================STRUCTURE GLOBALE ========================= */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     padding-top: 100px;
-    /* espace pour le header fixe */
     background-color: rgb(35, 35, 35);
     color: white;
     font-family: 'police_simple', sans-serif;
     line-height: 1.6;
 }
 
-/* Le loader */
+/* Le loader : écran plein qui disparaît après 1s pour masquer le chargement */
 #loader {
     position: fixed;
     top: 0;
@@ -55,7 +48,7 @@ body {
     animation-delay: 1s;
 }
 
-/* animation cssfx */
+/* animation cssfx : carré central + 8 losanges qui se déplacent en orbite */
 .breeding-rhombus-spinner {
     height: 100px;
     width: 100px;
@@ -191,7 +184,7 @@ body {
     }
 }
 
-/* animation cssfx */
+/* animation cssfx : effet Newton cradle pour ponctuer l'attente */
 .balls {
     width: 7.5em;
     display: flex;
@@ -238,10 +231,8 @@ body {
     }
 }
 
-
-/* =========================================================
-   HEADER
-========================================================= */
+/* =============HEADER=============== */
+/* barre fixe translucide avec logo et navigation, accentuée au survol */
 header {
     display: flex;
     justify-content: space-between;
@@ -259,7 +250,6 @@ header {
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-
 header:hover {
     box-shadow: 0 0 15px aquamarine;
     background-color: rgba(0, 0, 0, 0.9);
@@ -276,6 +266,7 @@ header:hover {
 }
 
 /* ---------- NAVIGATION ---------- */
+/* liens du header agrandis au survol pour renforcer l'effet néon */
 nav a {
     color: white;
     font-size: 50px;
@@ -288,18 +279,14 @@ nav a:hover {
 }
 
 /* ---------- ORBIT SPINNER ---------- */
+/* triple anneau tournant placé près du header comme élément décoratif */
 
 .orbit-spinner {
     position: absolute;
-    /* Position absolue par rapport au header */
     top: 10%;
-    /* Place-le en haut du header */
     left: 50%;
-    /* Centre-le horizontalement */
     transform: translateX(-50%);
-    /* Ajuste la position pour centrer */
     z-index: 1000;
-    /* Assure-toi qu'il soit au-dessus de tout autre élément du header */
     width: 75px;
     height: 75px;
     border-radius: 50%;
@@ -329,9 +316,8 @@ nav a:hover {
     animation: orbit-spinner-orbit-three-animation 1.2s linear infinite;
 }
 
-/* =========================================================
-   MENU
-========================================================= */
+/* =============MENU============= */
+/* bandeau de navigation secondaire sous le header */
 .menu {
     display: flex;
     justify-content: space-around;
@@ -377,9 +363,8 @@ nav a:hover {
     display: none;
 }
 
-/* =========================================================
-   MAIN
-========================================================= */
+/* =============MAIN============== */
+/* zone principale : fond néon et typographies mises en avant */
 main {
     text-align: center;
     text-shadow: 0 0 10px black;
@@ -415,9 +400,8 @@ main h2 {
     text-shadow: 0 0 5px aquamarine;
 }
 
-/* =========================================================
-   SECTION TEXTE
-========================================================= */
+/* ===============SECTION TEXTE=============== */
+/* grille mono-colonne avec cartes textuelles soulignées d'une bordure néon */
 .texte {
     font-size: 110%;
     line-height: 1.8;
@@ -457,9 +441,8 @@ main h2 {
     font-weight: bold;
 }
 
-/* =========================================================
-   LIENS BEAT
-========================================================= */
+/* =============== LIENS BEAT ============= */
+/* lien cliquable qui pulse pour attirer l'œil vers les beats */
 .beat-link {
     display: inline-block;
     position: relative;
@@ -476,9 +459,8 @@ main h2 {
     animation: pulseBeatHover 1.2s infinite alternate;
 }
 
-/* =========================================================
-   SECTION BEATS / YOUTUBE
-========================================================= */
+/* ========== SECTION BEATS / YOUTUBE ============= */
+/* mise en avant des vidéos et tuiles de beats, avec hover lumineux */
 .beats h3,
 .youtube h3 {
     font-family: 'police_design', cursive;
@@ -517,7 +499,8 @@ main h2 {
     margin-bottom: 10px;
 }
 
-/* ---------- CTA ---------- */
+/* ---------- CTA ---------- aide IA */
+/* bloc d'appel à l'action en dégradé, centré et légèrement zoomable */
 .cta {
     display: flex;
     flex-direction: column;
@@ -565,9 +548,8 @@ main h2 {
     transform: scale(1.05);
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* =============== FOOTER =============== */
+/* pied de page sobre, séparé visuellement par une fine bordure */
 footer {
     background: black;
     color: rgb(200, 200, 200);
@@ -584,9 +566,7 @@ footer small {
     color: gray;
 }
 
-/* =========================================================
-   ANIMATIONS
-========================================================= */
+/* ================ ANIMATIONS =================== */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -665,9 +645,7 @@ footer small {
     }
 }
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* ============== RESPONSIVE ================ */
 
 @media (max-width: 1024px) {
     main h1 {
@@ -675,7 +653,7 @@ footer small {
     }
 }
 
-/* ---------- TABLETTES ≤ 768px ---------- */
+/* ---------- ≤ 768px ---------- */
 @media (max-width: 768px) {
 
     .logo {
@@ -691,7 +669,7 @@ footer small {
     }
 }
 
-/* ---------- SMARTPHONES ≤ 577px ---------- */
+/* ---------- ≤ 577px ---------- */
 @media (max-width: 577px) {
 
     .logo h3 {
@@ -723,7 +701,7 @@ footer small {
     }
 }
 
-/* ---------- TÉLÉPHONES ≤ 425px ---------- */
+/* ---------- ≤ 425px ---------- */
 @media (max-width: 425px) {
 
     .header {
